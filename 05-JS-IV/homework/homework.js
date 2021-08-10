@@ -151,8 +151,12 @@ function agregarMetodoCalculoDescuento(producto) {
   // producto.precio -> 20
   // producto.porcentajeDeDescuento -> 0.2 (o simplemente ".2")
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
+   // Objet.Keys(); devuelve propiedades dentro del objeto
+    // Objet.Value()
+    //objeto.hsOwnPpoperty(""); este objeto tiene esta propiedad? devuelve true o false;
+    //for in devuelve el nombre de las propiedades o el contenido de la propiedades;
   // Tu código:
-  producto.calcularPrecioDescuento = () => {
+  producto.calcularPrecioDescuento = function() {
     return this.precio - ( this.precio * this.porcentajeDeDescuento );
   };
   return producto;
