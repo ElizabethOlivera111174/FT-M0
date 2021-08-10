@@ -3,18 +3,31 @@
 function mayuscula(nombre) {
   //La función recibe un nombre y debe devolver el mismo que recibe pero con su primer letra en mayúscula
   //ej: Recibe "mario" ----> Devuelve "Mario"
-  //Tu código:
+  //Tu código: 
+  // let arr = nombre.split('');
+  //  arr[0]= arr[0].toUpperCase();
+  //  arr[arr.length-1]= arr[arr.length-1].toUpperCase();
+  //  let cadena="";
+  //  for (let i = 0; i < arr.length; i++) {
+  //  cadena= cadena+ arr[i];
+  //  }
+  //  return cadena;
+  
+  return nombre.charAt(0).toUpperCase()+ nombre.slice(1);;
 }
 
 function invocarCallback(cb) {
   // Invoca al callback `cb`
   //Tu código:
+  return cb();
 }
 
 function operacionMatematica(n1, n2, cb) {
   //Vamos a recibir una función que realiza una operación matemática como callback junto con dos números.
   //Devolver el callback pasándole como argumentos los números recibidos.
   //Tu código:
+  return cb(n1,n2);
+ 
 }
 
 function sumarArray(numeros, cb) {
@@ -22,12 +35,19 @@ function sumarArray(numeros, cb) {
   // Pasa el resultado a `cb`
   // No es necesario devolver nada
   //Tu código:
+  //cb es una funcion
+  let suma = 0;
+  for (let i = 0; i < numeros.length; i++) {
+    suma= suma + numeros[i];    
+  }
+ cb(suma);
 }
 
 function forEach(array, cb) {
   // Itera sobre la matriz "array" y pasa los valores al callback uno por uno
   // Pista: Estarás invocando a `cb` varias veces (una por cada valor en la matriz)
   //Tu código:
+  array.forEach((element )=>cb(element))
 }
 
 function map(array, cb) {
@@ -35,6 +55,10 @@ function map(array, cb) {
   // Itera sobre cada valor en "array", pásalo a `cb` y luego ubicar el valor devuelto por `cb` en un nuevo array
   // El nuevo array debe tener la misma longitud que el array del argumento
   //Tu código:
+  let matriz=[];
+  array.map((elemento, i)=>{ 
+    matriz[i]=cb(elemento);
+  })
 }
 
 function filter(array) {
