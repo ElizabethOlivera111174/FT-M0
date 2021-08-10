@@ -11,12 +11,14 @@ function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
   return array[array.length-1];
+  // returt array.pop();
 }
 
 
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
   // Tu código:
+  // return array.shift();
   return array.length;
 }
 
@@ -60,6 +62,7 @@ function dePalabrasAFrase(palabras) {
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
   return palabras.join(" ");
+  // split, include, concat
 }
 
 
@@ -136,6 +139,10 @@ function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
+  //arguments []
+  // multiplicarArgumentos()
+  //multiplicarArgumentos("Hola")
+  // arguments ["Hola"] arreglo interno que tiene todas las funciones.
   if(arguments.length < 1) return 0;
   let producto=1;
   for (var i = 0; i < arguments.length; i++) {
